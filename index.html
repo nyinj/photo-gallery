@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="hero-section">
+    <img src="imgs/hero.jpg" alt="Hero Image">
+    <div class="hero-text">
+      <h1>Welcome to Bhutan's Virtual Art Gallery</h1>
+    </div>
+    <a href="#gallery" class="scroll-symbol">&#8595;</a>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="grid">
+        <div class="grid-item">
+          <img src="imgs/1.webp" alt="Artwork 1" class="artwork" onclick="openModal();currentSlide(1)">
+          <p class="desc">Cat in the box</p>
+          <p class="artist">by Jigme Tashi</p>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/2.jpg" alt="Artwork 2" class="artwork" onclick="openModal();currentSlide(2)">
+          <p class="desc">Tapestry art</p>
+          <p class="artist">by Tshewang Pema</p>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/3.jpg" alt="Artwork 3" class="artwork" onclick="openModal();currentSlide(3)">
+          <p class="desc">Four corners of the world</p>
+          <p class="artist">by Karma Wangmo</p>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/4.webp" alt="Artwork 4" class="artwork" onclick="openModal();currentSlide(4)">
+          <p class="desc">...</p>
+          <p class="artist">by Jigme Tashi</p>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/5.webp" alt="Artwork 5" class="artwork" onclick="openModal();currentSlide(5)">
+          <p class="desc">A flower for a thought?</p>
+          <p class="artist">by Tshering Pem</p>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/6.jpg" alt="Artwork 6" class="artwork" onclick="openModal();currentSlide(6)">
+          <p class="desc">Depicting a start and an end</p>
+          <p class="artist">by Jigme Tashi</p>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/7.jpg" alt="Artwork 7" class="artwork" onclick="openModal();currentSlide(7)">
+        </div>
+        <div class="grid-item">
+          <img src="imgs/8.jpg" alt="Artwork 8" class="artwork" onclick="openModal();currentSlide(8)">
+          <p class="desc">Three souls</p>
+          <p class="artist">by Pema Thinley</p>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/9.jpg" alt="Artwork 9" class="artwork" onclick="openModal();currentSlide(9)">
+        </div>
+        <div class="grid-item">
+          <img src="imgs/10.jpg" alt="Artwork 10" class="artwork" onclick="openModal();currentSlide(10)">
+          <p class="desc">Three takes</p>
+          <p class="artist">by Pema Thinley</p>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/11.jpg" alt="Artwork 11" class="artwork" onclick="openModal();currentSlide(11)">
+        </div>
+        <div class="grid-item">
+          <img src="imgs/12.jpg" alt="Artwork 12" class="artwork" onclick="openModal();currentSlide(12)">
+        </div>
+        <div class="grid-item">
+          <img src="imgs/13.jpg" alt="Artwork 13" class="artwork" onclick="openModal();currentSlide(13)">
+        </div>
+        <div class="grid-item">
+          <img src="imgs/14.jpg" alt="Artwork 14" class="artwork" onclick="openModal();currentSlide(14)">
+          <p class="desc">Three steps</p>
+          <p class="artist">by Kinley Penjore</p>
+        </div>
+        <div class="grid-item">
+          <img src="imgs/15.jpg" alt="Artwork 15" class="artwork" onclick="openModal();currentSlide(15)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="lightbox-content">
+      <div class="lightbox-slide">
+        <img src="imgs/1.webp" alt="Artwork 1">
+        <div class="caption">Cat in a box</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/2.jpg" alt="Artwork 2">
+        <div class="caption">Tapestry</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/3.jpg" alt="Artwork 3">
+        <div class="caption">The world</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/4.webp" alt="Artwork 4">
+        <div class="caption">...</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/5.webp" alt="Artwork 5">
+        <div class="caption">CA flower for a thought?</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/6.jpg" alt="Artwork 6">
+        <div class="caption">CThe start and the end</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/7.jpg" alt="Artwork 7">
+        <div class="caption">one soul</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/8.jpg" alt="Artwork 8">
+        <div class="caption">two souls</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/9.jpg" alt="Artwork 9">
+        <div class="caption">Cthree souls</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/10.jpg" alt="Artwork 10">
+        <div class="caption">one take</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/11.jpg" alt="Artwork 11">
+        <div class="caption">two takes</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/12.jpg" alt="Artwork 12">
+        <div class="caption">three takes</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/13.jpg" alt="Artwork 13">
+        <div class="caption">one step</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/14.jpg" alt="Artwork 14">
+        <div class="caption">two steps</div>
+      </div>
+      <div class="lightbox-slide">
+        <img src="imgs/15.jpg" alt="Artwork 15">
+        <div class="caption">three steps</div>
+      </div>
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+<footer>
+  <p>Photo Gallery by <span class="creator">&#169; nyinj</span></p>
+</footer>
+
+</html>
